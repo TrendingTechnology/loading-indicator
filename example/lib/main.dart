@@ -56,14 +56,66 @@ class MyApp extends StatelessWidget {
 
   Widget _buildFlipCircleTab(BuildContext context) {
     return ListView(
-      padding: EdgeInsets.all(16),
+      padding: EdgeInsets.symmetric(vertical: 16),
       children: <Widget>[
         _buildRow(
           'Default FlipCircle',
           FlipCircle(),
         ),
         _buildRow(
-          'Color Variations',
+          'Size Variation',
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                FlipCircle(
+                  size: 30,
+                ),
+                FlipCircle(
+                  size: 40,
+                ),
+                FlipCircle(
+                  size: 50,
+                ),
+                FlipCircle(
+                  size: 60,
+                ),
+                FlipCircle(
+                  size: 70,
+                ),
+              ],
+            ),
+          ),
+        ),
+        _buildRow(
+          'Border Variation',
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                FlipCircle(
+                  borderSize: 2,
+                ),
+                FlipCircle(
+                  borderSize: 3,
+                ),
+                FlipCircle(
+                  borderSize: 5,
+                ),
+                FlipCircle(
+                  borderSize: 8,
+                ),
+                FlipCircle(
+                  borderSize: 13,
+                ),
+              ],
+            ),
+          ),
+        ),
+        _buildRow(
+          'Color Variation',
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
@@ -83,6 +135,42 @@ class MyApp extends StatelessWidget {
                 ),
                 FlipCircle(
                   borderColor: Colors.deepOrange,
+                ),
+              ],
+            ),
+          ),
+        ),
+        _buildRow(
+          'Speed Variation',
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                FlipCircle(
+                  borderColor: Colors.transparent,
+                  backgroundColor: Colors.cyan,
+                  duration: Duration(milliseconds: 2100),
+                ),
+                FlipCircle(
+                  borderColor: Colors.transparent,
+                  backgroundColor: Colors.blue,
+                  duration: Duration(milliseconds: 1800),
+                ),
+                FlipCircle(
+                  borderColor: Colors.transparent,
+                  backgroundColor: Colors.deepPurple,
+                  duration: Duration(milliseconds: 1500),
+                ),
+                FlipCircle(
+                  borderColor: Colors.transparent,
+                  backgroundColor: Colors.pink,
+                  duration: Duration(milliseconds: 1200),
+                ),
+                FlipCircle(
+                  borderColor: Colors.transparent,
+                  backgroundColor: Colors.deepOrange,
+                  duration: Duration(milliseconds: 900),
                 ),
               ],
             ),
@@ -94,11 +182,66 @@ class MyApp extends StatelessWidget {
 
   Widget _buildRotatingSquareTab() {
     return ListView(
-      padding: EdgeInsets.all(16),
+      padding: EdgeInsets.symmetric(vertical: 16),
       children: <Widget>[
-        _buildRow('Default Rotating Square', RotatingSquare()),
         _buildRow(
-          'Color Variations',
+          'Default RotatingSquare',
+          RotatingSquare(),
+        ),
+        _buildRow(
+          'Size Variation',
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                RotatingSquare(
+                  size: 30,
+                ),
+                RotatingSquare(
+                  size: 40,
+                ),
+                RotatingSquare(
+                  size: 50,
+                ),
+                RotatingSquare(
+                  size: 60,
+                ),
+                RotatingSquare(
+                  size: 70,
+                ),
+              ],
+            ),
+          ),
+        ),
+        _buildRow(
+          'Border Variation',
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                RotatingSquare(
+                  borderSize: 2,
+                ),
+                RotatingSquare(
+                  borderSize: 3,
+                ),
+                RotatingSquare(
+                  borderSize: 5,
+                ),
+                RotatingSquare(
+                  borderSize: 8,
+                ),
+                RotatingSquare(
+                  borderSize: 13,
+                ),
+              ],
+            ),
+          ),
+        ),
+        _buildRow(
+          'Color Variation',
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
@@ -123,17 +266,118 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
+        _buildRow(
+          'Speed Variation',
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                RotatingSquare(
+                  borderColor: Colors.transparent,
+                  backgroundColor: Colors.cyan,
+                  duration: Duration(milliseconds: 2100),
+                ),
+                RotatingSquare(
+                  borderColor: Colors.transparent,
+                  backgroundColor: Colors.blue,
+                  duration: Duration(milliseconds: 1800),
+                ),
+                RotatingSquare(
+                  borderColor: Colors.transparent,
+                  backgroundColor: Colors.deepPurple,
+                  duration: Duration(milliseconds: 1500),
+                ),
+                RotatingSquare(
+                  borderColor: Colors.transparent,
+                  backgroundColor: Colors.pink,
+                  duration: Duration(milliseconds: 1200),
+                ),
+                RotatingSquare(
+                  borderColor: Colors.transparent,
+                  backgroundColor: Colors.deepOrange,
+                  duration: Duration(milliseconds: 900),
+                ),
+              ],
+            ),
+          ),
+        ),
       ],
     );
   }
 
   Widget _buildFlipBoxTab() {
     return ListView(
-      padding: EdgeInsets.all(16),
+      padding: EdgeInsets.symmetric(vertical: 16),
       children: <Widget>[
-        _buildRow('Default Flip Box', FlipBox()),
         _buildRow(
-          'Color Variations',
+          'Default FlipCircle',
+          FlipBox(),
+        ),
+        _buildRow(
+          'Size Variation',
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                FlipBox(
+                  size: 30,
+                ),
+                FlipBox(
+                  size: 40,
+                ),
+                FlipBox(
+                  size: 50,
+                ),
+                FlipBox(
+                  size: 60,
+                ),
+                FlipBox(
+                  size: 70,
+                ),
+              ],
+            ),
+          ),
+        ),
+        _buildRow(
+          'Border Variation',
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                FlipBox(
+                  borderSize: 2,
+                  borderColor: Colors.blueGrey,
+                  backgroundColor: Colors.transparent,
+                ),
+                FlipBox(
+                  borderSize: 3,
+                  borderColor: Colors.blueGrey,
+                  backgroundColor: Colors.transparent,
+                ),
+                FlipBox(
+                  borderSize: 5,
+                  borderColor: Colors.blueGrey,
+                  backgroundColor: Colors.transparent,
+                ),
+                FlipBox(
+                  borderSize: 8,
+                  borderColor: Colors.blueGrey,
+                  backgroundColor: Colors.transparent,
+                ),
+                FlipBox(
+                  borderSize: 13,
+                  borderColor: Colors.blueGrey,
+                  backgroundColor: Colors.transparent,
+                ),
+              ],
+            ),
+          ),
+        ),
+        _buildRow(
+          'Color Variation',
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
@@ -146,13 +390,44 @@ class MyApp extends StatelessWidget {
                   backgroundColor: Colors.blue,
                 ),
                 FlipBox(
-                  backgroundColor: Colors.purple,
+                  backgroundColor: Colors.deepPurple,
                 ),
                 FlipBox(
                   backgroundColor: Colors.pink,
                 ),
                 FlipBox(
                   backgroundColor: Colors.deepOrange,
+                ),
+              ],
+            ),
+          ),
+        ),
+        _buildRow(
+          'Speed Variation',
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                FlipBox(
+                  backgroundColor: Colors.cyan,
+                  duration: Duration(milliseconds: 2100),
+                ),
+                FlipBox(
+                  backgroundColor: Colors.blue,
+                  duration: Duration(milliseconds: 1800),
+                ),
+                FlipBox(
+                  backgroundColor: Colors.deepPurple,
+                  duration: Duration(milliseconds: 1500),
+                ),
+                FlipBox(
+                  backgroundColor: Colors.pink,
+                  duration: Duration(milliseconds: 1200),
+                ),
+                FlipBox(
+                  backgroundColor: Colors.deepOrange,
+                  duration: Duration(milliseconds: 900),
                 ),
               ],
             ),
@@ -166,12 +441,12 @@ class MyApp extends StatelessWidget {
     return Column(
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.only(bottom: 16.0),
+          padding: const EdgeInsets.only(bottom: 8.0),
           child: Center(child: Text(title)),
         ),
         body,
         Divider(
-          height: 50,
+          height: 30,
         ),
       ],
     );
