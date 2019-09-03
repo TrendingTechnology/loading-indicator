@@ -1,0 +1,16 @@
+name: loading_indicator
+description: A Flutter package with a selection of loading indicators.
+version: 0.0.1
+author: Andre Cytryn <andre@cytryn.com.br>
+homepage: 
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
