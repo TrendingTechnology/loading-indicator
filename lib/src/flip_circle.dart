@@ -28,11 +28,11 @@ class FlipCircle extends StatefulWidget {
             'loading_indicator: property [color] must not be null'),
         assert(shape != null,
             'loading_indicator property [shape] must not be null'),
-        assert(size != null,
-            'loading_indicator property [size] must not be null'),
+        assert(
+            size != null, 'loading_indicator property [size] must not be null'),
         assert(borderSize != null ? borderSize < size / 2 : true,
             'loading_indicator: property [borderSize] must not be greater than half the widget size'),
-            assert(duration != null,
+        assert(duration != null,
             'loading_indicator: property [duration] must not be null'),
         super(key: key);
 
@@ -62,7 +62,6 @@ class _FlipCircleState extends State<FlipCircle>
 
   @override
   Widget build(BuildContext context) {
-    // print('value: ${_animation.value}');
     final Matrix4 transform = Matrix4.identity()
       ..rotateY((0 - _animation.value) * 3 * pi);
 

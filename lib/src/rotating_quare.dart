@@ -62,12 +62,8 @@ class _RotatingSquareState extends State<RotatingSquare>
 
   @override
   Widget build(BuildContext context) {
-    // print('value: ${_animation.value}');
-    // final Matrix4 transform = Matrix4.identity()
-    //   ..rotateX((0 - _animation.value) * 2 * pi);
     final Matrix4 transform = Matrix4.rotationZ(_animation.value * pi * 2.0);
 
-    // TODO find out how not to cut the border from the box
     return Center(
       child: Transform(
         transform: transform,

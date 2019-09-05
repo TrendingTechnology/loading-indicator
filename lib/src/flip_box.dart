@@ -21,7 +21,7 @@ class FlipBox extends StatefulWidget {
     this.size = 50.0,
     this.borderSize,
     this.itemBuilder, // nao sei pra que serve ainda
-    this.duration = const Duration(milliseconds: 1000),
+    this.duration = const Duration(milliseconds: 1500),
   })  :
         // ? TODO assertions may be stupid. remove it?
         assert(borderColor != null,
@@ -42,22 +42,23 @@ class FlipBox extends StatefulWidget {
 
 class _FlipBoxState extends State<FlipBox> with SingleTickerProviderStateMixin {
   AnimationController _controller;
-  Animation<double> _firstAnimation;
-  Animation<double> _secondAnimation;
+  Animation<double> _animation1;
+  Animation<double> _animation2;
 
   @override
   void initState() {
     super.initState();
     _controller = widget.controller ??
         AnimationController(vsync: this, duration: widget.duration);
-    _firstAnimation = Tween(begin: 0.0, end: pi).animate(
+
+    _animation1 = Tween(begin: 0.0, end: pi).animate(
       CurvedAnimation(
         parent: _controller,
         curve: const Interval(0.0, 0.5, curve: Curves.easeOut),
       ),
     )..addListener(() => setState(() {}));
 
-    _secondAnimation = Tween(begin: 0.0, end: pi).animate(
+    _animation2 = Tween(begin: 0.0, end: pi).animate(
       CurvedAnimation(
         parent: _controller,
         curve: const Interval(0.5, 1.0, curve: Curves.easeOut),
@@ -71,8 +72,8 @@ class _FlipBoxState extends State<FlipBox> with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     final Matrix4 transform = Matrix4.identity()
       ..setEntry(3, 2, 0.005)
-      ..rotateX(_firstAnimation.value)
-      ..rotateY(_secondAnimation.value);
+      ..rotateX(_animation1.value)
+      ..rotateY(_animation2.value);
     return Center(
       child: Transform(
         transform: transform,

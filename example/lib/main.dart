@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: DefaultTabController(
-        length: 3,
+        length: 4,
         child: Scaffold(
             appBar: AppBar(
               centerTitle: true,
@@ -39,6 +39,11 @@ class MyApp extends StatelessWidget {
                         size: 30,
                         backgroundColor: Colors.white,
                       )),
+                      Tab(
+                          child: BouncingGrid(
+                        size: 30,
+                        color: Colors.white,
+                      )),
                     ]),
               ),
             ),
@@ -48,6 +53,7 @@ class MyApp extends StatelessWidget {
                 _buildFlipCircleTab(context),
                 _buildRotatingSquareTab(),
                 _buildFlipBoxTab(),
+                _buildBouncingGridTab(),
               ],
             )),
       ),
@@ -383,21 +389,11 @@ class MyApp extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                FlipBox(
-                  backgroundColor: Colors.cyan,
-                ),
-                FlipBox(
-                  backgroundColor: Colors.blue,
-                ),
-                FlipBox(
-                  backgroundColor: Colors.deepPurple,
-                ),
-                FlipBox(
-                  backgroundColor: Colors.pink,
-                ),
-                FlipBox(
-                  backgroundColor: Colors.deepOrange,
-                ),
+                FlipBox(backgroundColor: Colors.cyan),
+                FlipBox(backgroundColor: Colors.blue),
+                FlipBox(backgroundColor: Colors.deepPurple),
+                FlipBox(backgroundColor: Colors.pink),
+                FlipBox(backgroundColor: Colors.deepOrange),
               ],
             ),
           ),
@@ -427,6 +423,113 @@ class MyApp extends StatelessWidget {
                 ),
                 FlipBox(
                   backgroundColor: Colors.deepOrange,
+                  duration: Duration(milliseconds: 900),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildBouncingGridTab() {
+    return ListView(
+      padding: EdgeInsets.symmetric(vertical: 16),
+      children: <Widget>[
+        _buildRow(
+          'Default BouncingGrid',
+          BouncingGrid(),
+        ),
+        _buildRow(
+          'Size Variation',
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                BouncingGrid(size: 30),
+                BouncingGrid(size: 40),
+                BouncingGrid(size: 50),
+                BouncingGrid(size: 60),
+                BouncingGrid(size: 70),
+              ],
+            ),
+          ),
+        ),
+        _buildRow(
+          'Color Variation',
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                BouncingGrid(color: Colors.cyan),
+                BouncingGrid(color: Colors.blue),
+                BouncingGrid(color: Colors.deepPurple),
+                BouncingGrid(color: Colors.pink),
+                BouncingGrid(color: Colors.deepOrange),
+              ],
+            ),
+          ),
+        ),
+        _buildRow(
+          'Shape Variation',
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                BouncingGrid(color: Colors.cyan, shape: BoxShape.circle),
+                BouncingGrid(color: Colors.blue, shape: BoxShape.circle),
+                BouncingGrid(color: Colors.deepPurple, shape: BoxShape.circle),
+                BouncingGrid(color: Colors.pink, shape: BoxShape.circle),
+                BouncingGrid(color: Colors.deepOrange, shape: BoxShape.circle),
+              ],
+            ),
+          ),
+        ),
+        _buildRow(
+          'Inverted Variation',
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                BouncingGrid(color: Colors.cyan, inverted: true),
+                BouncingGrid(color: Colors.blue, inverted: true),
+                BouncingGrid(color: Colors.deepPurple, inverted: true),
+                BouncingGrid(color: Colors.pink, inverted: true),
+                BouncingGrid(color: Colors.deepOrange, inverted: true),
+              ],
+            ),
+          ),
+        ),
+        _buildRow(
+          'Speed Variation',
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                BouncingGrid(
+                  color: Colors.cyan,
+                  duration: Duration(milliseconds: 2100),
+                ),
+                BouncingGrid(
+                  color: Colors.blue,
+                  duration: Duration(milliseconds: 1800),
+                ),
+                BouncingGrid(
+                  color: Colors.deepPurple,
+                  duration: Duration(milliseconds: 1500),
+                ),
+                BouncingGrid(
+                  color: Colors.pink,
+                  duration: Duration(milliseconds: 1200),
+                ),
+                BouncingGrid(
+                  color: Colors.deepOrange,
                   duration: Duration(milliseconds: 900),
                 ),
               ],
