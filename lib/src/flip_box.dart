@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-class FlipBox extends StatefulWidget {
+class LoadingFlipBox extends StatefulWidget {
   final AnimationController controller;
   final Color borderColor;
   final Color backgroundColor;
@@ -12,7 +12,7 @@ class FlipBox extends StatefulWidget {
   final Duration duration;
   final IndexedWidgetBuilder itemBuilder;
 
-  FlipBox({
+  LoadingFlipBox({
     Key key,
     this.controller,
     this.borderColor = Colors.transparent,
@@ -37,10 +37,10 @@ class FlipBox extends StatefulWidget {
         super(key: key);
 
   @override
-  _FlipBoxState createState() => _FlipBoxState();
+  _LoadingFlipBoxState createState() => _LoadingFlipBoxState();
 }
 
-class _FlipBoxState extends State<FlipBox> with SingleTickerProviderStateMixin {
+class _LoadingFlipBoxState extends State<LoadingFlipBox> with SingleTickerProviderStateMixin {
   AnimationController _controller;
   Animation<double> _animation1;
   Animation<double> _animation2;

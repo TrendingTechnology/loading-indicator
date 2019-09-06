@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-class FlipCircle extends StatefulWidget {
+class LoadingFlipCircle extends StatefulWidget {
   final AnimationController controller;
   final Color borderColor;
   final Color backgroundColor;
@@ -12,7 +12,7 @@ class FlipCircle extends StatefulWidget {
   final Duration duration;
   final IndexedWidgetBuilder itemBuilder;
 
-  FlipCircle({
+  LoadingFlipCircle({
     Key key,
     this.controller,
     this.borderColor = Colors.blueGrey,
@@ -37,10 +37,10 @@ class FlipCircle extends StatefulWidget {
         super(key: key);
 
   @override
-  _FlipCircleState createState() => _FlipCircleState();
+  _LoadingFlipCircleState createState() => _LoadingFlipCircleState();
 }
 
-class _FlipCircleState extends State<FlipCircle>
+class _LoadingFlipCircleState extends State<LoadingFlipCircle>
     with SingleTickerProviderStateMixin {
   AnimationController _controller;
   Animation<double> _animation;

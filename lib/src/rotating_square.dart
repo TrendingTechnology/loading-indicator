@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-class RotatingSquare extends StatefulWidget {
+class LoadingRotatingSquare extends StatefulWidget {
   final AnimationController controller;
   final Color borderColor;
   final Color backgroundColor;
@@ -12,7 +12,7 @@ class RotatingSquare extends StatefulWidget {
   final Duration duration;
   final IndexedWidgetBuilder itemBuilder;
 
-  RotatingSquare({
+  LoadingRotatingSquare({
     Key key,
     this.controller,
     this.borderColor = Colors.blueGrey,
@@ -37,10 +37,10 @@ class RotatingSquare extends StatefulWidget {
         super(key: key);
 
   @override
-  _RotatingSquareState createState() => _RotatingSquareState();
+  _LoadingRotatingSquareState createState() => _LoadingRotatingSquareState();
 }
 
-class _RotatingSquareState extends State<RotatingSquare>
+class _LoadingRotatingSquareState extends State<LoadingRotatingSquare>
     with SingleTickerProviderStateMixin {
   AnimationController _controller;
   Animation<double> _animation;

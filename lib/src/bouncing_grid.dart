@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class BouncingGrid extends StatefulWidget {
+class LoadingBouncingGrid extends StatefulWidget {
   final AnimationController controller;
   final Color color;
   final BoxShape shape;
@@ -9,7 +9,7 @@ class BouncingGrid extends StatefulWidget {
   final IndexedWidgetBuilder itemBuilder;
   final Duration duration;
 
-  BouncingGrid({
+  LoadingBouncingGrid({
     Key key,
     this.controller,
     this.color = Colors.blueGrey,
@@ -31,10 +31,10 @@ class BouncingGrid extends StatefulWidget {
         super(key: key);
 
   @override
-  _BouncingGridState createState() => _BouncingGridState();
+  _LoadingBouncingGridState createState() => _LoadingBouncingGridState();
 }
 
-class _BouncingGridState extends State<BouncingGrid>
+class _LoadingBouncingGridState extends State<LoadingBouncingGrid>
     with SingleTickerProviderStateMixin {
   AnimationController _controller;
   Animation<double> _animation1,
