@@ -70,7 +70,16 @@ class _RotatingSquareState extends State<RotatingSquare>
         alignment: Alignment.center,
         child: SizedBox.fromSize(
           size: Size.square(widget.size),
-          child: DecoratedBox(
+          child: _itemBuilder(0),
+        ),
+      ),
+    );
+  }
+
+  _itemBuilder(int index) {
+    return widget.itemBuilder != null
+        ? widget.itemBuilder(context, index)
+        : DecoratedBox(
             decoration: BoxDecoration(
               shape: widget.shape,
               color: widget.backgroundColor,
@@ -80,10 +89,7 @@ class _RotatingSquareState extends State<RotatingSquare>
                 style: BorderStyle.solid,
               ),
             ),
-          ),
-        ),
-      ),
-    );
+          );
   }
 
   @override

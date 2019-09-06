@@ -72,7 +72,16 @@ class _FlipCircleState extends State<FlipCircle>
         alignment: Alignment.center,
         child: SizedBox.fromSize(
           size: Size.square(widget.size),
-          child: DecoratedBox(
+          child: _itemBuilder(0),
+        ),
+      ),
+    );
+  }
+
+  Widget _itemBuilder(int index) {
+    return widget.itemBuilder != null
+        ? widget.itemBuilder(context, index)
+        : DecoratedBox(
             decoration: BoxDecoration(
               shape: widget.shape,
               color: widget.backgroundColor ?? Colors.transparent,
@@ -82,10 +91,7 @@ class _FlipCircleState extends State<FlipCircle>
                 style: BorderStyle.solid,
               ),
             ),
-          ),
-        ),
-      ),
-    );
+          );
   }
 
   @override
