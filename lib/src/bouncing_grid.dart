@@ -104,10 +104,8 @@ class _BouncingGridState extends State<BouncingGrid>
       size: Size.square(widget.size),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        mainAxisSize: MainAxisSize.max,
         children: <Widget>[
           Row(
-            mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               _buildSquare(_animation3, 0),
@@ -116,7 +114,6 @@ class _BouncingGridState extends State<BouncingGrid>
             ],
           ),
           Row(
-            mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               _buildSquare(_animation2, 3),
@@ -125,7 +122,6 @@ class _BouncingGridState extends State<BouncingGrid>
             ],
           ),
           Row(
-            mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               _buildSquare(_animation1, 6),

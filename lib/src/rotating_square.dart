@@ -76,7 +76,7 @@ class _RotatingSquareState extends State<RotatingSquare>
     );
   }
 
-  _itemBuilder(int index) {
+  Widget _itemBuilder(int index) {
     return widget.itemBuilder != null
         ? widget.itemBuilder(context, index)
         : DecoratedBox(

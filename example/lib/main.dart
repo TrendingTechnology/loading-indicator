@@ -10,16 +10,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Loading Indicators',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.blueGrey,
       ),
       home: DefaultTabController(
         length: 4,
         child: Scaffold(
             appBar: AppBar(
               centerTitle: true,
-              title: Text('Flutter Loading Indicators'),
               bottom: PreferredSize(
-                preferredSize: Size.fromHeight(44.0),
+                preferredSize: Size.fromHeight(0.0),
                 child: TabBar(
                     isScrollable: true,
                     indicatorColor: Colors.white,
@@ -49,8 +48,7 @@ class MyApp extends StatelessWidget {
             ),
             body: TabBarView(
               children: <Widget>[
-                // FLIP CIRCLE
-                _buildFlipCircleTab(context),
+                _buildFlipCircleTab(),
                 _buildRotatingSquareTab(),
                 _buildFlipBoxTab(),
                 _buildBouncingGridTab(),
@@ -60,7 +58,7 @@ class MyApp extends StatelessWidget {
     );
   }
 
-  Widget _buildFlipCircleTab(BuildContext context) {
+  Widget _buildFlipCircleTab() {
     return ListView(
       padding: EdgeInsets.symmetric(vertical: 16),
       children: <Widget>[
@@ -75,21 +73,11 @@ class MyApp extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                FlipCircle(
-                  size: 30,
-                ),
-                FlipCircle(
-                  size: 40,
-                ),
-                FlipCircle(
-                  size: 50,
-                ),
-                FlipCircle(
-                  size: 60,
-                ),
-                FlipCircle(
-                  size: 70,
-                ),
+                FlipCircle(size: 30),
+                FlipCircle(size: 40),
+                FlipCircle(size: 50),
+                FlipCircle(size: 60),
+                FlipCircle(size: 70),
               ],
             ),
           ),
@@ -101,21 +89,11 @@ class MyApp extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                FlipCircle(
-                  borderSize: 2,
-                ),
-                FlipCircle(
-                  borderSize: 3,
-                ),
-                FlipCircle(
-                  borderSize: 5,
-                ),
-                FlipCircle(
-                  borderSize: 8,
-                ),
-                FlipCircle(
-                  borderSize: 13,
-                ),
+                FlipCircle(borderSize: 2),
+                FlipCircle(borderSize: 3),
+                FlipCircle(borderSize: 5),
+                FlipCircle(borderSize: 8),
+                FlipCircle(borderSize: 13),
               ],
             ),
           ),
@@ -127,21 +105,11 @@ class MyApp extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                FlipCircle(
-                  borderColor: Colors.cyan,
-                ),
-                FlipCircle(
-                  borderColor: Colors.blue,
-                ),
-                FlipCircle(
-                  borderColor: Colors.deepPurple,
-                ),
-                FlipCircle(
-                  borderColor: Colors.pink,
-                ),
-                FlipCircle(
-                  borderColor: Colors.deepOrange,
-                ),
+                FlipCircle(borderColor: Colors.cyan),
+                FlipCircle(borderColor: Colors.blue),
+                FlipCircle(borderColor: Colors.deepPurple),
+                FlipCircle(borderColor: Colors.pink),
+                FlipCircle(borderColor: Colors.deepOrange),
               ],
             ),
           ),
@@ -253,21 +221,11 @@ class MyApp extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                RotatingSquare(
-                  borderColor: Colors.cyan,
-                ),
-                RotatingSquare(
-                  borderColor: Colors.blue,
-                ),
-                RotatingSquare(
-                  borderColor: Colors.deepPurple,
-                ),
-                RotatingSquare(
-                  borderColor: Colors.pink,
-                ),
-                RotatingSquare(
-                  borderColor: Colors.deepOrange,
-                ),
+                RotatingSquare(borderColor: Colors.cyan),
+                RotatingSquare(borderColor: Colors.blue),
+                RotatingSquare(borderColor: Colors.deepPurple),
+                RotatingSquare(borderColor: Colors.pink),
+                RotatingSquare(borderColor: Colors.deepOrange),
               ],
             ),
           ),
@@ -327,21 +285,11 @@ class MyApp extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                FlipBox(
-                  size: 30,
-                ),
-                FlipBox(
-                  size: 40,
-                ),
-                FlipBox(
-                  size: 50,
-                ),
-                FlipBox(
-                  size: 60,
-                ),
-                FlipBox(
-                  size: 70,
-                ),
+                FlipBox(size: 30),
+                FlipBox(size: 40),
+                FlipBox(size: 50),
+                FlipBox(size: 60),
+                FlipBox(size: 70),
               ],
             ),
           ),
