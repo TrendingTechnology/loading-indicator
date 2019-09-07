@@ -63,7 +63,7 @@ class MyApp extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 16),
       children: <Widget>[
         _buildRow(
-          'Default FlipCircle',
+          'Default LoadingFlipCircle()',
           LoadingFlipCircle(),
         ),
         _buildRow(
@@ -159,7 +159,7 @@ class MyApp extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 16),
       children: <Widget>[
         _buildRow(
-          'Default RotatingSquare',
+          'Default LoadingRotatingSquare()',
           LoadingRotatingSquare(),
         ),
         _buildRow(
@@ -275,7 +275,7 @@ class MyApp extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 16),
       children: <Widget>[
         _buildRow(
-          'Default FlipCircle',
+          'Default LoadingFlipBox()',
           LoadingFlipBox(),
         ),
         _buildRow(
@@ -386,7 +386,7 @@ class MyApp extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 16),
       children: <Widget>[
         _buildRow(
-          'Default BouncingGrid',
+          'Default LoadingBouncingGrid()',
           LoadingBouncingGrid(),
         ),
         _buildRow(
