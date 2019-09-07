@@ -1,3 +1,3 @@
-## [0.0.1] - TODO: Add release date.
+## [1.0.0] - TODO: Add release date.
 
-* First version is here is the first loading indicator.
+* First version release with 4 indicators.
