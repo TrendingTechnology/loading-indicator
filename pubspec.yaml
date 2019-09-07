@@ -6,7 +6,8 @@ homepage: https://github.com/cytryn/loading-indicator
 repository: https://github.com/cytryn/loading-indicator
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: '>=2.1.0 <3.0.0'
+  flutter: ^0.1.2
 
 dependencies:
   flutter:
