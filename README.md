@@ -33,7 +33,7 @@ LoadingFlipCircle(
   color: Colors.blue,
 );
 ```
-Or you can customize a bit:
+Or you can customize it a bit:
 ```dart
 LoadingFlipCircle(
   borderColor: Colors.cyan,
@@ -57,7 +57,8 @@ Note: all the indicators come ready to go just by calling `LoadingFlipBox()`, fo
 
 ## Examples
 
-For a more true experience of the animations and variations, download the example project and run using `flutter run --profile`.
+For a more true experience of the animations and variations,
+download the example project and run using `flutter run --profile`.
 
 <table>
 <tr>
